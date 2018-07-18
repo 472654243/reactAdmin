@@ -1,6 +1,7 @@
 import React from 'react'
 import { Menu, Icon } from 'antd';
 import MenuConfig from './../../config/menuConfig'
+import { NavLink } from 'react-router-dom'
 import './index.less'
 
 const SubMenu = Menu.SubMenu;
@@ -15,16 +16,18 @@ export default class NavLeft extends React.Component {
   }
   renderMenu = (data) => { 
     return data.map((item) => { 
-      if (item.children) { 
+      if (item.children) {
         return (
           <SubMenu key={item.key} title={<span><Icon type={item.icon} /><span>{item.title}</span></span>}>
-            { this.renderMenu(item.children)}
+            {this.renderMenu(item.children)}
           </SubMenu>
         )
-      }
-      return (
-        <Menu.Item key={item.key}><Icon type={item.icon} />{item.title}</Menu.Item>        
-      )
+      } 
+      
+      return <Menu.Item key={item.key}>{item.icon ? <Icon type={item.icon} /> : ''}
+          <NavLink to={item.key}>{item.title}</NavLink>
+        </Menu.Item>        
+      
     })
   }
   render() { 

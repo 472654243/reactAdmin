@@ -12,7 +12,7 @@ export default class DRouter extends React.Component {
           <Route path="/admin" render={() =>
             <Admin>
               <Switch>
-                <Route path='/ui/buttons' component={Buttons} />
+                <Route path='/admin/ui/buttons' component={Buttons} />
               </Switch>
             </Admin>
           }/>
