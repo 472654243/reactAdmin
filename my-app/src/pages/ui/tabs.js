@@ -16,19 +16,19 @@ export default class Buttons extends React.Component {
           title:'Tab 1',
           content: 'Tab 1',
           key: '1',
-          content:'1'
+          contant:'1'
       },
       {
           title: 'Tab 2',
           content: 'Tab 2',
           key: '2',
-          content:'2'
+          contant:'2'
       },
       {
           title: 'Tab 3',
           content: 'Tab 3',
           key: '3',
-          content:'3'
+          contant:'3'
       }
     ]
 
@@ -100,7 +100,7 @@ export default class Buttons extends React.Component {
                 return <TabPane
                   tab={panel.title}
                   key={panel.key}
-                >{panel.content}</TabPane>
+                >{panel.contant}</TabPane>
               })
             }
           </Tabs>
