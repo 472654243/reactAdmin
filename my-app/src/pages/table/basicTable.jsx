@@ -100,7 +100,7 @@ export default class BasicTable extends React.Component {
     let rows = this.state.selectedRows;
     let ids = [];
     rows.map(item => {
-      ids.push(item.id);
+      return ids.push(item.id);
     });
     Modal.confirm({
       title: '删除提示',
