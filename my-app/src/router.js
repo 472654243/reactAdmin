@@ -16,6 +16,8 @@ import BasicTable from './pages/table/basicTable';
 import HighTable from './pages/table/highTable';
 import Rich from './pages/rich';
 import City from './pages/city/index';
+import Order from './pages/order/index'
+
 
 export default class DRouter extends React.Component {
   render() {
@@ -41,6 +43,7 @@ export default class DRouter extends React.Component {
                   <Route path="/admin/table/high" component={HighTable} />
                   <Route path="/admin/rich" component={Rich} />
                   <Route path="/admin/city" component={City} />
+                  <Route path="/admin/order" component={Order} />
                 </Switch>
               </Admin>
             )}
